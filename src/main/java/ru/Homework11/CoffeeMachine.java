@@ -5,7 +5,7 @@ public class CoffeeMachine {
 
     //приготоволение кофе
     public void makeCoffee(int waterAmount) {
-        if (waterAmount <= MIN_WATER_NEEDED) {
+        if (waterAmount < MIN_WATER_NEEDED) {
             throw new NotEnoughWaterException(
                     String.format("Недостаточно воды для приготовления кофе. " +
                                     "Требуется: %d мл, доступно: %d мл. ",
@@ -25,7 +25,7 @@ public class CoffeeMachine {
     //название кофе большими буквами
     public String printCoffeeName(String coffeeName) {
         String upperCase = coffeeName.toUpperCase();
-        System.out.println(coffeeName);
+        System.out.println(upperCase);
         return upperCase;
     }
 }
