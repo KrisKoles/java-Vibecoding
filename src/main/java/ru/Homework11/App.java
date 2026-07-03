@@ -1,4 +1,5 @@
 package ru.Homework11;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -14,9 +15,17 @@ public class App {
 
             myCoffeeMachine.makeCoffee(amountWater); //пытаемся приготовить кофе
 
+            }catch (InputMismatchException e){
+            System.out.println("Ошибка: нужно ввести число");
+
             }catch (NotEnoughWaterException e){
             System.out.println("Ошибка: " + e.getMessage());
+            }
+                finally {
+            scanner.close();
+            System.out.println("Проверка кофемашины завершена");
         }
+
         }
     }
 
