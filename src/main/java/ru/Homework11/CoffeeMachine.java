@@ -19,8 +19,14 @@ public class CoffeeMachine {
 
     //сколько чашек можно приготовить
     public int calculateCups(int waterAmount, int cupSize) {
-        return waterAmount/cupSize;
+        return waterAmount / cupSize;
     }
 
+    //название кофе большими буквами
+    public String printCoffeeName(String coffeeName) {
+        String upperCase = coffeeName.toUpperCase();
+        System.out.println(coffeeName);
+        return upperCase;
     }
+}
 
