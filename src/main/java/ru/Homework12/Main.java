@@ -28,7 +28,7 @@ public class Main {
             System.out.println("Ошибка: имя пассажира не может быть пустым");
 
         }catch (InvalidBaggageWeightException e) {
-            System.out.println("Ошибка: вес багажа не может быть отрицательмы");
+            System.out.println("Ошибка: вес багажа не может быть 0 или отрицательным");
 
         }catch (FlightNotFoundException e) {
             System.out.println("Ошибка: указанного пассажиром рейса не существует в базе");
