@@ -27,7 +27,7 @@ public class BaggageDropDesk {
         }if("AE-404".equals(flightNumber)){
             throw new BaggageTagPrintException("Не удалось напечатать багажную бирку для рейса " + flightNumber + ".");
         }
-        System.out.println("Багаж успешно зарегистрирован для " + passengersName + " Необходимости уплатить налог за слишком правильные введенные данные");
+        System.out.println("Багаж успешно зарегистрирован для " + passengersName + ". Необходимо оплатить налог за вредность");
         return new BaggageTicket(passengersName, flightNumber, baggageWeight);
     }
 }
