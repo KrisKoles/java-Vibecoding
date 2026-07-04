@@ -30,5 +30,7 @@ public class BaggageTicket {
                " ,Вес багажа:" + baggageWeight;
     }
 
+
+
 }
 
