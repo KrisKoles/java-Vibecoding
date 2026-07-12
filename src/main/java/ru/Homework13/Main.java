@@ -13,10 +13,15 @@ public class Main {
         aliens.add(new Alien("Омниус", "Сириус-Б", 2));
         aliens.add(new Alien("Зерг-Мастер", "Глизе-581", 10));
 
-
         //Проверяем, содержит ли список дубликат
         System.out.println("Содержит дубликаты? " +
                 (aliens.size() != new HashSet<>(aliens).size()));
+
+        // Создаём экземпляр SquadManager
+        SquadManager manager = new SquadManager();
+
+        // Вызываем метод demonstrateListCreations()
+        manager.demonstrateListCreations();
     }
 }
 
