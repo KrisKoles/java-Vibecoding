@@ -3,7 +3,7 @@ package ru.Homework13;
 import java.util.LinkedList;
 
 public class AssaultQueue {
-    LinkedList<String> queue;
+    private LinkedList<String> queue;
 
     //создаём пустую очередь
     public AssaultQueue() {
@@ -14,6 +14,11 @@ public class AssaultQueue {
     public void addRecruit(String name){
         queue.addLast(name);  // добавляем в конец очереди
         System.out.println("Штурмовик \"" + name + "\" добавлен в очередь");
+    }
+
+    @Override
+    public String toString() {
+        return queue.toString();
     }
 
     //Удаляет и возвращает штурмовика из начала очереди

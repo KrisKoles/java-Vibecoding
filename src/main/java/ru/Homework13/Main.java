@@ -2,6 +2,7 @@ package ru.Homework13;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,7 +52,28 @@ public class Main {
 
         // Итог
         queue.printQueue();
+
+
+        // Создаём список пришельцев
+        List<Alien> captured = List.of(
+                new Alien("Зигмунд", "Марс", 3),
+                new Alien("Громозека", "Венера", 9),
+                new Alien("Кракен", "Нептун", 10)
+        );
+
+        // Создаём два отчёта с одинаковыми данными
+        MissionReport report1 = new MissionReport("Штурм Зоны 51", new ArrayList<>(captured), 50);
+        MissionReport report2 = new MissionReport("Штурм Зоны 51", new ArrayList<>(captured), 50);
+
+        // Выводим отчёты
+        System.out.println(report1);
+        System.out.println(report2);
+
+        // Сравниваем
+        System.out.println("== : " + (report1 == report2));
+        System.out.println("equals(): " + report1.equals(report2));
     }
 }
+
 
 

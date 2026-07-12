@@ -66,7 +66,6 @@ public class SquadManager {
         }
         System.out.println();
 
-
         //Тестируем List.of
         //добавляем
         try {
