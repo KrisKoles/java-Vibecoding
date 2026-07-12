@@ -9,13 +9,14 @@ public class BaggageDropDesk {
     private String[] availableFlights;
     private static final int MAX_WEIGHT = 23;
 
-    public BaggageDropDesk(){
-        this.availableFlights = new String[]{ "SU-123", "TK-777", "KC-909", "AE-404" };
+    public BaggageDropDesk(String[] availableFlights) {
+        this.availableFlights = availableFlights;
     }
 
     //сдача багажа
     public BaggageTicket baggageCheckIn(String passengersName, String flightNumber, int baggageWeight)
             throws FlightNotFoundException, OverweightBaggageException, BaggageTagPrintException{
+
         if(passengersName == null || passengersName.trim().isEmpty()){
             throw new InvalidPassengerNameException("Имя пассажира не может быть пустым.");
         }if(baggageWeight <= 0){
