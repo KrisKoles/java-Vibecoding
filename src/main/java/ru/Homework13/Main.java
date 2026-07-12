@@ -12,6 +12,12 @@ public class Main {
         aliens.add(new Alien("Зигмунд", "Марс", 8));
         aliens.add(new Alien("Омниус", "Сириус-Б", 2));
         aliens.add(new Alien("Зерг-Мастер", "Глизе-581", 10));
+        aliens.add(new Alien("Громозека", "Венера", 9));
+        aliens.add(new Alien("Трус Петя", "Альфа Центавра", 5));
+        aliens.add(new Alien("Зигмунд", "Марс", 8));
+        aliens.add(new Alien("Трус Вася", "Сириус-Б", 2));
+        aliens.add(new Alien("Зерг-Мастер", "Глизе-581", 10));
+
 
         //Проверяем, содержит ли список дубликат
         System.out.println("Содержит дубликаты? " +
@@ -22,6 +28,9 @@ public class Main {
 
         // Вызываем метод demonstrateListCreations()
         manager.demonstrateListCreations();
+
+        // Вызываем фильтрацию по "Трус"
+        manager.filterOutCowards(aliens);
     }
 }
 

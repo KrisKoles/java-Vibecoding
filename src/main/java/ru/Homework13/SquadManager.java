@@ -2,6 +2,7 @@ package ru.Homework13;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class SquadManager {
@@ -84,11 +85,33 @@ public class SquadManager {
             System.out.println(" Удаление: " + e.getClass().getSimpleName());
         }
         System.out.println();
-
     }
 
+    public void filterOutCowards(List<Alien> squad) {
+        System.out.println("До: " + squad);
+        int before = squad.size();
+        squad.removeIf(alien -> alien.getName().startsWith("Трус"));
+        System.out.println("Удалено: " + (before - squad.size()));
+        System.out.println("После: " + squad);
+    }
 
+    public void filterOutCowardsWithIterator(List<String> squad) {
+        System.out.println("До: " + squad);
 
-}
+        Iterator<String> iterator = squad.iterator();
+        int removed = 0;
+
+        while (iterator.hasNext()) {
+            if (iterator.next().startsWith("Трус")) {
+                iterator.remove();
+                removed++;
+            }
+        }
+
+        System.out.println("Удалено: " + removed);
+        System.out.println("После: " + squad);
+    }
+};
+
 
 
