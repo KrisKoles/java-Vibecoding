@@ -31,6 +31,27 @@ public class Main {
 
         // Вызываем фильтрацию по "Трус"
         manager.filterOutCowards(aliens);
+
+        AssaultQueue queue = new AssaultQueue();
+
+        //добавили 5 человек
+        queue.addRecruit("Громозека");
+        queue.addRecruit("Шредер");
+        queue.addRecruit("Тор-Могул");
+        queue.addRecruit("Кракен");
+        queue.addRecruit("Брут");
+
+        // Уходят 2
+        System.out.println("Ушли: " + queue.retreatCoward() + ", " + queue.retreatCoward());
+
+        // Добавляем 3 новых
+        queue.addRecruit("Зигмунд");
+        queue.addRecruit("Кью-Кью");
+        queue.addRecruit("Омниус");
+
+        // Итог
+        queue.printQueue();
     }
 }
+
 
